@@ -7,7 +7,7 @@
    Autor:  Guilherme Saldanha
    Site:   https://guisaldanha.com
    GitHub: https://github.com/guisaldanha/adminer-obsidian-amber
-   Versão: 1.1
+   Versão: 1.2
    Licença: MIT
    ============================================================ */
 
@@ -549,7 +549,7 @@ input.wayoff {
 
 /* ── Tamanhos ──────────────────────────────────────────────── */
 .size {
-    width: 12ex;
+    width: 7ex;
 }
 
 .help {
@@ -764,14 +764,14 @@ input.wayoff {
 /* ── Breadcrumb ────────────────────────────────────────────── */
 #breadcrumb {
     white-space: nowrap;
-    position: absolute;
+    position: relative;
     top: 0;
-    left: 21em;
+    left: 0;
     background: var(--bg2);
     height: 2em;
     line-height: 1.8em;
     padding: 0 1.2em;
-    margin: 0 0 0 -18px;
+    margin: 0 0 10px -30px;
     font-size: 82%;
     border-bottom: 1px solid var(--border);
     border-right: 1px solid var(--border);
