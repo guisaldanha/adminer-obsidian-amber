@@ -1,0 +1,1207 @@
+/* ============================================================
+   ADMINER — TEMA OBSIDIAN AMBER
+   Estética: Terminal futurista • Dark mode refinado
+   Fonte: JetBrains Mono + Syne
+   Paleta: Obsidian #0d1117 / Âmbar #f59e0b / Esmeralda #10b981
+
+   Autor:  Guilherme Saldanha
+   Site:   https://guisaldanha.com
+   Versão: 1.0.0
+   Licença: MIT
+   ============================================================ */
+
+@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@300;400;500;700&family=Syne:wght@400;600;700;800&display=swap');
+
+/* ── Variáveis ─────────────────────────────────────────────── */
+html {
+    --bg:        #0d1117;
+    --bg2:       #161b22;
+    --bg3:       #21262d;
+    --fg:        #e6edf3;
+    --dim:       #21262d;
+    --lit:       #1c2333;
+    --amber:     #f59e0b;
+    --amber-dim: #78350f;
+    --emerald:   #10b981;
+    --red:       #f87171;
+    --blue:      #58a6ff;
+    --muted:     #8b949e;
+    --border:    #30363d;
+    --radius:    6px;
+    --radius-lg: 10px;
+    --glow:      0 0 12px rgba(245,158,11,.25);
+    --glow-sm:   0 0 6px rgba(245,158,11,.15);
+}
+
+/* ── Reset & Base ──────────────────────────────────────────── */
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+
+body {
+    color: var(--fg);
+    background: var(--bg);
+    font: 90%/1.5 'JetBrains Mono', 'Cascadia Code', 'Fira Code', monospace;
+    margin: 0;
+    min-width: fit-content;
+    background-image:
+        radial-gradient(ellipse 80% 50% at 20% -10%, rgba(245,158,11,.06) 0%, transparent 60%),
+        radial-gradient(ellipse 60% 40% at 80% 110%, rgba(16,185,129,.04) 0%, transparent 60%);
+    background-attachment: fixed;
+}
+
+/* ── Links ─────────────────────────────────────────────────── */
+a {
+    color: var(--blue);
+    text-decoration: none;
+    transition: color .15s, text-shadow .15s;
+}
+
+a:visited {
+    color: #a5b4fc;
+}
+
+a:link:hover, a:visited:hover {
+    color: var(--amber);
+    text-decoration: none;
+    text-shadow: 0 0 8px rgba(245,158,11,.5);
+}
+
+a.text:hover {
+    text-decoration: none;
+}
+
+a.jush-help:hover {
+    color: inherit;
+}
+
+/* ── Cabeçalhos ────────────────────────────────────────────── */
+h1 {
+    font-family: 'Syne', sans-serif;
+    font-size: 150%;
+    font-weight: 800;
+    margin: 0;
+    padding: .7em 1em .7em 1.2em;
+    border-bottom: 1px solid var(--border);
+    color: var(--amber);
+    background: var(--bg2);
+    letter-spacing: .04em;
+    text-transform: uppercase;
+    position: relative;
+    overflow: hidden;
+}
+
+h1::before {
+    content: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='22' height='22' viewBox='0 0 24 24' fill='none' stroke='%23f59e0b' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round'%3E%3Cellipse cx='12' cy='5' rx='9' ry='3'/%3E%3Cpath d='M3 5v14c0 1.66 4.03 3 9 3s9-1.34 9-3V5'/%3E%3Cpath d='M3 12c0 1.66 4.03 3 9 3s9-1.34 9-3'/%3E%3C/svg%3E");
+    display: inline-block;
+    vertical-align: middle;
+    margin-right: .5em;
+    margin-bottom: 2px;
+    filter: drop-shadow(0 0 4px rgba(245,158,11,.6));
+}
+
+h1::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 2px;
+    background: linear-gradient(90deg, var(--amber), transparent 70%);
+}
+
+h2 {
+    font-family: 'Syne', sans-serif;
+    font-size: 130%;
+    font-weight: 700;
+    margin: 0 0 20px -18px;
+    padding: .65em 1em .65em 1.2em;
+    border-bottom: 1px solid var(--border);
+    background: var(--lit);
+    color: var(--fg);
+    position: relative;
+    letter-spacing: .02em;
+}
+
+h2::before {
+    content: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='18' height='18' viewBox='0 0 24 24' fill='none' stroke='%2310b981' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Crect x='3' y='3' width='18' height='18' rx='2'/%3E%3Cpath d='M3 9h18M9 21V9'/%3E%3C/svg%3E");
+    display: inline-block;
+    vertical-align: middle;
+    margin-right: .45em;
+    margin-bottom: 2px;
+}
+
+h2::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    width: 3px;
+    background: linear-gradient(180deg, var(--amber), var(--emerald));
+    border-radius: 0 2px 2px 0;
+}
+
+h3 {
+    font-family: 'Syne', sans-serif;
+    font-weight: 600;
+    font-size: 115%;
+    margin: 1.2em 0 .4em;
+    color: var(--amber);
+    letter-spacing: .06em;
+    text-transform: uppercase;
+    font-size: 85%;
+}
+
+h3::before {
+    content: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='14' height='14' viewBox='0 0 24 24' fill='none' stroke='%23f59e0b' stroke-width='2.5' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='9 18 15 12 9 6'/%3E%3C/svg%3E");
+    display: inline-block;
+    vertical-align: middle;
+    margin-right: .3em;
+}
+
+/* ── Formulário ────────────────────────────────────────────── */
+form {
+    margin: 0;
+}
+
+/* ── Tabelas ───────────────────────────────────────────────── */
+td table {
+    width: 100%;
+    margin: 0;
+}
+
+table {
+    margin: 1em 20px 0 0;
+    font-size: 88%;
+    border-spacing: 0;
+    border-width: 1px 0 0 1px;
+    border-radius: var(--radius-lg);
+    overflow: hidden;
+    box-shadow: 0 4px 24px rgba(0,0,0,.4), 0 0 0 1px var(--border);
+}
+
+table, td, th, .js .column {
+    border-color: var(--border);
+    border-style: solid;
+}
+
+td, th {
+    border-width: 0 1px 1px 0;
+    padding: .35em .6em;
+    margin: 0;
+}
+
+th {
+    background: var(--bg3);
+    text-align: left;
+    color: var(--amber);
+    font-weight: 500;
+    letter-spacing: .05em;
+    text-transform: uppercase;
+    font-size: 78%;
+}
+
+thead {
+    position: sticky;
+    top: 0;
+    z-index: 10;
+}
+
+thead th {
+    text-align: center;
+    padding: .4em .7em;
+    background: var(--bg2);
+    border-bottom: 2px solid var(--amber-dim);
+}
+
+thead td, thead th {
+    background: var(--bg2);
+}
+
+tbody tr {
+    transition: background .12s;
+}
+
+tbody tr:hover td, tbody tr:hover th {
+    background: rgba(245,158,11,.06);
+}
+
+/* ── Fieldset ──────────────────────────────────────────────── */
+fieldset {
+    display: inline;
+    vertical-align: top;
+    padding: .6em 1em;
+    margin: .8em .5em 0 0;
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    background: var(--bg2);
+    box-shadow: inset 0 1px 0 rgba(255,255,255,.04);
+}
+
+fieldset legend {
+    color: var(--amber);
+    font-size: 80%;
+    letter-spacing: .08em;
+    text-transform: uppercase;
+    padding: 0 .4em;
+}
+
+/* ── Parágrafo ─────────────────────────────────────────────── */
+p {
+    margin: .8em 20px 0 0;
+}
+
+/* ── Imagens ───────────────────────────────────────────────── */
+img {
+    vertical-align: middle;
+    border: 0;
+}
+
+td img {
+    max-width: 200px;
+    max-height: 200px;
+    border-radius: 4px;
+}
+
+/* ── Código ────────────────────────────────────────────────── */
+code {
+    font-size: 100%;
+    padding: 2px 6px;
+    background: var(--bg3);
+    border: 1px solid var(--border);
+    border-radius: 4px;
+    color: var(--emerald);
+    font-family: 'JetBrains Mono', monospace;
+}
+
+pre {
+    margin: 1em 0 0;
+}
+
+td pre {
+    margin: 0;
+}
+
+pre, textarea {
+    font: 100%/1.5 'JetBrains Mono', monospace;
+}
+
+pre.jush {
+    background: var(--bg);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    padding: 1em;
+}
+
+pre code {
+    display: block;
+    font-size: 100%;
+    background: none;
+    border: none;
+    padding: 0;
+    color: var(--fg);
+}
+
+/* ── Inputs ────────────────────────────────────────────────── */
+input, textarea {
+    box-sizing: border-box;
+    background: var(--bg3);
+    border: 1px solid var(--border);
+    color: var(--fg);
+    border-radius: var(--radius);
+    padding: .3em .6em;
+    font-family: inherit;
+    transition: border-color .15s, box-shadow .15s;
+    outline: none;
+}
+
+input:focus, textarea:focus {
+    border-color: var(--amber);
+    box-shadow: var(--glow-sm);
+}
+
+input, select {
+    vertical-align: middle;
+}
+
+input[type="radio"] {
+    vertical-align: text-bottom;
+}
+
+input[type="submit"], input[type="button"], button {
+    background: var(--bg3);
+    color: var(--fg);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    padding: .3em .9em;
+    cursor: pointer;
+    font-family: inherit;
+    font-size: 88%;
+    letter-spacing: .04em;
+    transition: background .15s, border-color .15s, color .15s, box-shadow .15s;
+}
+
+input[type="submit"]:hover, button:hover {
+    background: var(--amber);
+    color: var(--bg);
+    border-color: var(--amber);
+    box-shadow: var(--glow);
+    font-weight: 600;
+}
+
+select {
+    background: var(--bg3);
+    border: 1px solid var(--border);
+    color: var(--fg);
+    border-radius: var(--radius);
+    padding: .25em .5em;
+    font-family: inherit;
+    outline: none;
+    cursor: pointer;
+}
+
+input.default {
+    box-shadow: 0 0 0 2px var(--amber-dim);
+}
+
+input.required, input.maxlength {
+    box-shadow: 0 0 0 2px var(--red);
+}
+
+input.wayoff {
+    left: -1000px;
+    position: absolute;
+}
+
+/* ── Utilitários ───────────────────────────────────────────── */
+.block {
+    display: block;
+}
+
+.version {
+    color: var(--muted);
+    font-size: 62%;
+}
+
+.js .hidden, .nojs .jsonly {
+    display: none;
+}
+
+.js .column {
+    position: absolute;
+    background: var(--lit);
+    padding: .27em 1ex .33em 0;
+    margin-top: -.37em;
+    border-width: 1px 1px 1px 0;
+    border-radius: 0 8px 8px 0;
+    border-color: var(--border);
+    border-style: solid;
+}
+
+.nowrap td, .nowrap th, td.nowrap, p.nowrap {
+    white-space: pre;
+}
+
+.wrap td {
+    white-space: normal;
+}
+
+/* ── Mensagens ─────────────────────────────────────────────── */
+.error {
+    color: var(--red);
+    background: rgba(248,113,113,.08);
+    border: 1px solid rgba(248,113,113,.3);
+    border-radius: var(--radius);
+}
+
+.error b {
+    background: transparent;
+    font-weight: 500;
+}
+
+.message {
+    color: var(--emerald);
+    background: rgba(16,185,129,.08);
+    border: 1px solid rgba(16,185,129,.25);
+    border-radius: var(--radius);
+}
+
+.message::before {
+    content: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='14' height='14' viewBox='0 0 24 24' fill='none' stroke='%2310b981' stroke-width='2.5' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='20 6 9 17 4 12'/%3E%3C/svg%3E");
+    display: inline-block;
+    vertical-align: middle;
+    margin-right: .4em;
+}
+
+.message table {
+    color: var(--fg);
+    background: var(--bg);
+}
+
+.error, .message {
+    padding: .6em 1em;
+    margin: 1em 20px 0 0;
+}
+
+/* ── Cores de tipo de dado ─────────────────────────────────── */
+.char     { color: #4ade80; }
+.date     { color: #c084fc; }
+.enum     { color: #22d3ee; }
+.binary   { color: var(--red); }
+.function, .number, .datetime { text-align: right; color: #fb923c; }
+.type     { width: 15ex; color: var(--muted); }
+
+/* ── Tabela listrada ───────────────────────────────────────── */
+.odds tbody tr {
+    background: var(--bg);
+}
+
+.odds tbody tr:nth-child(2n) {
+    background: rgba(255,255,255,.02);
+}
+
+.js .checkable .checked td,
+.js .checkable .checked th {
+    background: rgba(245,158,11,.08);
+}
+
+/* ── Outros utilitários ────────────────────────────────────── */
+.time {
+    color: var(--muted);
+    font-size: 70%;
+}
+
+.options select, .options input {
+    width: 20ex;
+}
+
+.view {
+    font-style: italic;
+    color: var(--muted);
+}
+
+.active {
+    font-weight: 700;
+    color: var(--amber);
+}
+
+.sqlarea {
+    width: 98%;
+    min-height: 8em;
+    background: var(--bg2);
+    border: 1px solid var(--border);
+    color: var(--fg);
+    border-radius: var(--radius);
+}
+
+.sql-footer {
+    margin-bottom: 2.5em;
+}
+
+.explain table {
+    white-space: pre;
+}
+
+/* ── Ícones ────────────────────────────────────────────────── */
+.icon {
+    width: 20px;
+    height: 20px;
+    background: var(--bg3) center no-repeat;
+    border: 1px solid var(--border);
+    border-radius: 4px;
+    padding: 0;
+    vertical-align: middle;
+    cursor: pointer;
+    transition: background .15s, box-shadow .15s, border-color .15s;
+}
+
+.icon span {
+    display: none;
+}
+
+.icon:hover {
+    background-color: var(--amber);
+    border-color: var(--amber);
+    box-shadow: var(--glow-sm);
+}
+
+.icon-up {
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='14' height='14' viewBox='0 0 24 24' fill='none' stroke='%23f59e0b' stroke-width='2.5' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='18 15 12 9 6 15'/%3E%3C/svg%3E");
+}
+
+.icon-down {
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='14' height='14' viewBox='0 0 24 24' fill='none' stroke='%23f59e0b' stroke-width='2.5' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='6 9 12 15 18 9'/%3E%3C/svg%3E");
+}
+
+.icon-plus {
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='14' height='14' viewBox='0 0 24 24' fill='none' stroke='%2310b981' stroke-width='2.5' stroke-linecap='round' stroke-linejoin='round'%3E%3Cline x1='12' y1='5' x2='12' y2='19'/%3E%3Cline x1='5' y1='12' x2='19' y2='12'/%3E%3C/svg%3E");
+}
+
+.icon-cross {
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='14' height='14' viewBox='0 0 24 24' fill='none' stroke='%23f87171' stroke-width='2.5' stroke-linecap='round' stroke-linejoin='round'%3E%3Cline x1='18' y1='6' x2='6' y2='18'/%3E%3Cline x1='6' y1='6' x2='18' y2='18'/%3E%3C/svg%3E");
+}
+
+.icon-move {
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='14' height='14' viewBox='0 0 24 24' fill='none' stroke='%238b949e' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='5 9 2 12 5 15'/%3E%3Cpolyline points='9 5 12 2 15 5'/%3E%3Cpolyline points='15 19 12 22 9 19'/%3E%3Cpolyline points='19 9 22 12 19 15'/%3E%3Cline x1='2' y1='12' x2='22' y2='12'/%3E%3Cline x1='12' y1='2' x2='12' y2='22'/%3E%3C/svg%3E");
+}
+
+/* ── Tamanhos ──────────────────────────────────────────────── */
+.size {
+    width: 12ex;
+}
+
+.help {
+    cursor: help;
+    border-bottom: 1px dashed var(--muted);
+}
+
+/* ── Footer ────────────────────────────────────────────────── */
+.footer {
+    position: sticky;
+    bottom: 0;
+    margin: 23px -20px .5em 0;
+    box-shadow: 0 -5px 20px 10px var(--bg);
+}
+
+.footer > div {
+    background: var(--bg);
+    padding: 0 0 .5em;
+    border-top: 1px solid var(--border);
+}
+
+.footer fieldset {
+    margin-top: 0;
+}
+
+/* ── Links em linha ────────────────────────────────────────── */
+.links a {
+    white-space: nowrap;
+    margin-right: 20px;
+    padding: .2em .5em .2em 1.6em;
+    position: relative;
+    color: var(--muted);
+    border-radius: 4px;
+    transition: color .15s, background .15s;
+    font-size: 85%;
+}
+
+.links a::before {
+    content: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 24 24' fill='none' stroke='%23f59e0b' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cline x1='5' y1='12' x2='19' y2='12'/%3E%3Cpolyline points='12 5 19 12 12 19'/%3E%3C/svg%3E");
+    position: absolute;
+    left: .3em;
+    top: 50%;
+    transform: translateY(-52%);
+}
+
+.links a:hover {
+    color: var(--amber);
+    background: rgba(245,158,11,.08);
+}
+
+/* ── Logout ────────────────────────────────────────────────── */
+.logout {
+    margin-top: .5em;
+    position: absolute;
+    top: 0;
+    right: 0;
+    background-color: var(--bg);
+    box-shadow: -4px 0 12px rgba(0,0,0,.5);
+    padding: .4em .6em;
+    border-left: 1px solid var(--border);
+    border-bottom: 1px solid var(--border);
+    border-radius: 0 0 0 var(--radius);
+}
+
+.logout input[type="submit"] {
+    background: transparent;
+    border: 1px solid rgba(248,113,113,.4);
+    color: var(--red);
+    font-size: 78%;
+    letter-spacing: .06em;
+    text-transform: uppercase;
+}
+
+.logout input[type="submit"]:hover {
+    background: var(--red);
+    color: var(--bg);
+    box-shadow: 0 0 8px rgba(248,113,113,.4);
+}
+
+.logout input[type="submit"]::before {
+    content: "⏻ ";
+}
+
+.loadmore {
+    margin-left: 1ex;
+}
+
+/* ── Menu lateral ──────────────────────────────────────────── */
+#menu {
+    position: absolute;
+    margin: 10px 0 0;
+    top: 2em;
+    left: 0;
+    width: 19em;
+    background: var(--bg2);
+    border-right: 1px solid var(--border);
+    min-height: calc(100vh - 2em);
+    /* Necessário para os <li> em hover expandirem além da borda do menu */
+    overflow: visible;
+}
+
+#menu p, #logins, #tables {
+    padding: .7em 1em;
+    margin: 0;
+    border-bottom: 1px solid var(--border);
+}
+
+#logins li, #tables li {
+    list-style: none;
+    padding: .1em 0;
+}
+
+#tables li {
+    position: relative;
+    display: flex;
+    align-items: center;
+    gap: .4em;
+    /* Cada <li> controla seu próprio overflow */
+    overflow: hidden;
+    white-space: nowrap;
+}
+
+/* Ao passar o mouse sobre o <li>, só ELE expande — os outros ficam cortados */
+#tables li:hover {
+    overflow: visible;
+    /* Garante que o nome apareça acima do conteúdo principal */
+    z-index: 100;
+}
+
+/* Fundo no link ao expandir, para não ficar transparente sobre #content */
+#tables li:hover a,
+#tables li:hover span {
+    background: var(--bg2) !important;
+    padding-right: .5em;
+    border-radius: 0 3px 3px 0;
+    box-shadow: 4px 0 8px rgba(0,0,0,.5);
+}
+
+#tables li::before {
+    content: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='11' height='11' viewBox='0 0 24 24' fill='none' stroke='%2330363d' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Crect x='3' y='3' width='18' height='18' rx='2'/%3E%3Cpath d='M3 9h18M9 21V9'/%3E%3C/svg%3E");
+    flex-shrink: 0;
+    margin-top: 2px;
+}
+
+#dbs {
+    overflow: hidden;
+    padding: .6em 1em;
+    border-bottom: 1px solid var(--border);
+}
+
+#logins, #tables {
+    white-space: nowrap;
+    /* overflow gerenciado pelos <li> individualmente */
+    overflow: hidden;
+}
+
+#logins a, #tables a, #tables span {
+    background: transparent;
+    color: var(--muted);
+    font-size: 85%;
+    transition: color .12s;
+}
+
+#tables a.structure {
+    color: var(--fg);
+    font-weight: 500;
+}
+
+#tables a.structure:hover,
+#logins a:hover {
+    color: var(--amber);
+}
+
+#tables a.select {
+    color: var(--muted);
+    font-size: 76%;
+    border: 1px solid var(--border);
+    border-radius: 3px;
+    padding: 0 .3em;
+}
+
+#tables a.select:hover {
+    border-color: var(--emerald);
+    color: var(--emerald);
+}
+
+/* ── Conteúdo principal ────────────────────────────────────── */
+#content {
+    margin: 2em 0 0 21em;
+    padding: 14px 24px 24px 0;
+}
+
+/* ── Idioma ────────────────────────────────────────────────── */
+#lang {
+    position: absolute;
+    top: -2.6em;
+    left: 0;
+    padding: .3em 1em;
+    font-size: 82%;
+    color: var(--muted);
+}
+
+#lang label {
+    color: var(--muted);
+    font-size: 85%;
+}
+
+#menuopen {
+    display: none;
+}
+
+/* ── Breadcrumb ────────────────────────────────────────────── */
+#breadcrumb {
+    white-space: nowrap;
+    position: absolute;
+    top: 0;
+    left: 21em;
+    background: var(--bg2);
+    height: 2em;
+    line-height: 1.8em;
+    padding: 0 1.2em;
+    margin: 0 0 0 -18px;
+    font-size: 82%;
+    border-bottom: 1px solid var(--border);
+    border-right: 1px solid var(--border);
+    border-radius: 0 0 var(--radius) 0;
+}
+
+#breadcrumb::before {
+    content: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 24 24' fill='none' stroke='%238b949e' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z'/%3E%3Cpolyline points='9 22 9 12 15 12 15 22'/%3E%3C/svg%3E");
+    display: inline-block;
+    vertical-align: middle;
+    margin-right: .4em;
+    margin-bottom: 1px;
+}
+
+#breadcrumb a {
+    color: var(--muted);
+}
+
+#breadcrumb a:hover {
+    color: var(--amber);
+}
+
+/* ── Logo & identidade ─────────────────────────────────────── */
+#logo {
+    vertical-align: baseline;
+    margin-bottom: -3px;
+    filter: drop-shadow(0 0 4px rgba(245,158,11,.4));
+}
+
+#h1 {
+    color: var(--amber);
+    text-decoration: none;
+    font-style: normal;
+    font-family: 'Syne', sans-serif;
+    font-weight: 800;
+    letter-spacing: .06em;
+}
+
+#h1:hover {
+    color: #fff;
+    text-shadow: 0 0 12px rgba(245,158,11,.6);
+}
+
+#version {
+    color: var(--red);
+}
+
+/* ── Schema visual ─────────────────────────────────────────── */
+#schema {
+    margin-left: 60px;
+    position: relative;
+    user-select: none;
+    -webkit-user-select: none;
+}
+
+#schema .table {
+    border: 1px solid var(--border);
+    background: var(--bg2);
+    color: var(--fg);
+    padding: 0 4px;
+    cursor: move;
+    position: absolute;
+    border-radius: var(--radius);
+    box-shadow: 0 4px 12px rgba(0,0,0,.4);
+    transition: box-shadow .2s;
+}
+
+#schema .table:hover {
+    box-shadow: 0 4px 20px rgba(245,158,11,.2), 0 0 0 1px var(--amber);
+}
+
+#schema .references {
+    position: absolute;
+}
+
+#schema .arrow {
+    height: 1.25em;
+    background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='8' height='10' viewBox='0 0 8 10'%3E%3Cpath d='M0 0 L8 5 L0 10 Z' fill='%23f59e0b' opacity='.7'/%3E%3C/svg%3E") no-repeat right center;
+}
+
+/* ── Ajuda contextual ──────────────────────────────────────── */
+#help {
+    position: absolute;
+    border: 1px solid var(--border);
+    background: var(--bg2);
+    color: var(--fg);
+    padding: 8px 12px;
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 85%;
+    z-index: 1;
+    border-radius: var(--radius);
+    box-shadow: 0 8px 24px rgba(0,0,0,.5);
+}
+
+/* ── Target highlight ──────────────────────────────────────── */
+:target {
+    background: rgba(245,158,11,.08);
+    outline: 1px solid rgba(245,158,11,.3);
+    border-radius: 2px;
+}
+
+/* ── RTL ───────────────────────────────────────────────────── */
+.rtl h2 {
+    margin: 0 -18px 20px 0;
+}
+
+.rtl p, .rtl table, .rtl .error, .rtl .message {
+    margin: 1em 0 0 20px;
+}
+
+.rtl .logout {
+    left: 0;
+    right: auto;
+}
+
+.rtl #content {
+    margin: 2em 21em 0 0;
+    padding: 10px 0 20px 20px;
+}
+
+.rtl #breadcrumb {
+    left: auto;
+    right: 21em;
+    margin: 0 -18px 0 0;
+}
+
+.rtl .pages {
+    left: auto;
+    right: 21em;
+}
+
+.rtl input.wayoff {
+    left: auto;
+    right: -1000px;
+}
+
+.rtl #lang, .rtl #menu {
+    left: auto;
+    right: 0;
+}
+
+.rtl pre, .rtl code {
+    direction: ltr;
+}
+
+/* ── Scrollbar customizada ─────────────────────────────────── */
+::-webkit-scrollbar {
+    width: 6px;
+    height: 6px;
+}
+
+::-webkit-scrollbar-track {
+    background: var(--bg);
+}
+
+::-webkit-scrollbar-thumb {
+    background: var(--border);
+    border-radius: 3px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: var(--amber-dim);
+}
+
+/* ── Seleção de texto ──────────────────────────────────────── */
+::selection {
+    background: rgba(245,158,11,.25);
+    color: #fff;
+}
+
+/* ── Responsive ────────────────────────────────────────────── */
+@media all and (max-width: 800px) {
+    .pages {
+        left: auto;
+    }
+
+    .js .logout {
+        top: 1.667em;
+        background-color: var(--bg2);
+        box-shadow: 0 0 8px rgba(0,0,0,.5);
+    }
+
+    #menu {
+        position: static;
+        width: auto;
+        min-width: 23em;
+        min-height: auto;
+        background: var(--bg2);
+        border: 1px solid var(--border);
+        border-radius: var(--radius);
+        margin-top: 9px;
+        box-shadow: 0 8px 32px rgba(0,0,0,.6);
+    }
+
+    #content {
+        margin-left: 10px !important;
+    }
+
+    #lang {
+        position: static;
+    }
+
+    #breadcrumb {
+        left: 48px !important;
+    }
+
+    .js #foot {
+        position: absolute;
+        top: 2em;
+        left: 0;
+    }
+
+    .js .foot {
+        display: none;
+    }
+
+    .js #menuopen {
+        display: block;
+        position: absolute;
+        top: 3px;
+        left: 6px;
+    }
+
+    .nojs #menu {
+        position: static;
+    }
+
+    .rtl.js #foot {
+        left: auto;
+        right: 0;
+    }
+
+    .rtl .pages {
+        right: auto;
+    }
+
+    .rtl.js #menuopen {
+        left: auto;
+        right: 6px;
+    }
+
+    .rtl #content {
+        margin-left: 0 !important;
+        margin-right: 10px;
+    }
+
+    .rtl #breadcrumb {
+        left: auto !important;
+        right: 48px;
+    }
+}
+
+/* ── Print ─────────────────────────────────────────────────── */
+@media print {
+    #lang, #menu, .logout {
+        display: none;
+    }
+
+    #content {
+        margin-left: 1em;
+    }
+
+    #breadcrumb {
+        left: 1em;
+    }
+
+    body {
+        background: white;
+        color: black;
+    }
+
+    .rtl #content {
+        margin-left: auto;
+        margin-right: 1em;
+    }
+
+    .rtl #breadcrumb {
+        left: auto;
+        right: 1em;
+    }
+
+    .nowrap td, .nowrap th, td.nowrap {
+        white-space: normal;
+    }
+}
+
+/* ══════════════════════════════════════════════════════════════
+   JUSH — Syntax Highlighting (Tema Obsidian)
+   ══════════════════════════════════════════════════════════════ */
+.jush {
+    --text-color:          #e6edf3;
+    --bg-color:            #0d1117;
+    --php-color:           #79c0ff;
+    --string-color:        #a5d6ff;
+    --string-plain-color:  #7ee787;
+    --keyword-color:       #ff7b72;
+    --identifier-color:    #ffa657;
+    --value-color:         #d2a8ff;
+    --number-color:        #79c0ff;
+    --attribute-color:     #56d364;
+    --js-bg-color:         #161b22;
+    --css-bg-color:        #1a1f2e;
+    --php-bg-color:        #1c1e2a;
+    --php-sql-bg-color:    #1e1814;
+}
+
+.jush {
+    color: var(--text-color);
+    white-space: pre;
+    line-height: 1.6;
+}
+
+.jush-htm_com, .jush-com, .jush-com_code, .jush-one,
+.jush-php_doc, .jush-php_com, .jush-php_one,
+.jush-js_one, .jush-js_doc {
+    color: #8b949e;
+    font-style: italic;
+}
+
+.jush-php, .jush-php_new, .jush-php_fun {
+    color: var(--php-color);
+    background-color: var(--php-bg-color);
+}
+
+.jush-php_quo, .jush-php_eot, .jush-js_bac {
+    color: var(--string-color);
+}
+
+.jush-php_apo, .jush-quo, .jush-quo_one, .jush-apo,
+.jush-sql_apo, .jush-sqlite_apo, .jush-sql_quo, .jush-sql_eot {
+    color: var(--string-plain-color);
+}
+
+.jush-php_quo_var, .jush-php_var, .jush-sql_var,
+.jush-js_bac .jush-js {
+    font-style: italic;
+}
+
+.jush-php_apo .jush-php_quo_var, .jush-php_apo .jush-php_var {
+    font-style: normal;
+}
+
+.jush-php_halt2 {
+    background-color: var(--bg-color);
+    color: var(--text-color);
+}
+
+.jush-tag_css, .jush-att_css .jush-att_quo,
+.jush-att_css .jush-att_apo, .jush-att_css .jush-att_val {
+    color: var(--text-color);
+    background-color: var(--css-bg-color);
+}
+
+.jush-tag_js, .jush-att_js .jush-att_quo,
+.jush-att_js .jush-att_apo, .jush-att_js .jush-att_val,
+.jush-css_js {
+    color: var(--text-color);
+    background-color: var(--js-bg-color);
+}
+
+.jush-tag, .jush-xml_tag {
+    color: var(--keyword-color);
+}
+
+.jush-att, .jush-xml_att, .jush-att_js,
+.jush-att_css, .jush-att_http {
+    color: var(--attribute-color);
+}
+
+.jush-att_quo, .jush-att_apo, .jush-att_val {
+    color: var(--value-color);
+}
+
+.jush-ent {
+    color: var(--value-color);
+}
+
+.jush-js_key, .jush-js_key .jush-quo, .jush-js_key .jush-apo {
+    color: var(--value-color);
+}
+
+.jush-js_reg {
+    color: var(--keyword-color);
+}
+
+.jush-php_sql .jush-php_quo, .jush-php_sql .jush-php_apo,
+.jush-php_sqlite .jush-php_quo, .jush-php_sqlite .jush-php_apo,
+.jush-php_pgsql .jush-php_quo, .jush-php_pgsql .jush-php_apo,
+.jush-php_mssql .jush-php_quo, .jush-php_mssql .jush-php_apo,
+.jush-php_oracle .jush-php_quo, .jush-php_oracle .jush-php_apo {
+    background-color: var(--php-sql-bg-color);
+}
+
+.jush-bac, .jush-php_bac, .jush-bra,
+.jush-mssql_bra, .jush-sqlite_quo {
+    color: var(--identifier-color);
+}
+
+.jush-num, .jush-clr {
+    color: var(--number-color);
+}
+
+.jush a {
+    color: var(--keyword-color);
+}
+
+.jush a.jush-help {
+    cursor: help;
+}
+
+.jush-sql a, .jush-sql_code a, .jush-sqlite a,
+.jush-pgsql a, .jush-mssql a, .jush-oracle a,
+.jush-simpledb a, .jush-igdb a {
+    font-weight: 700;
+}
+
+.jush-php_sql .jush-php_quo a,
+.jush-php_sql .jush-php_apo a {
+    font-weight: normal;
+}
+
+.jush-tag a, .jush-att a, .jush-apo a, .jush-quo a,
+.jush-php_apo a, .jush-php_quo a, .jush-php_eot2 a {
+    color: inherit;
+}
+
+a.jush-custom:link, a.jush-custom:visited {
+    font-weight: normal;
+    color: inherit;
+}
+
+.jush p {
+    margin: 0;
+}
