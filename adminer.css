@@ -6,7 +6,8 @@
 
    Autor:  Guilherme Saldanha
    Site:   https://guisaldanha.com
-   Versão: 1.0.0
+   GitHub: https://github.com/guisaldanha/adminer-obsidian-amber
+   Versão: 1.1
    Licença: MIT
    ============================================================ */
 
@@ -1204,4 +1205,75 @@ a.jush-custom:link, a.jush-custom:visited {
 
 .jush p {
     margin: 0;
+}
+
+/* ══════════════════════════════════════════════════════════════
+   OLLAMA AUTOCOMPLETE — #ollama-ac
+   Estilizado como o elemento <select> do tema Obsidian Amber
+   ══════════════════════════════════════════════════════════════ */
+
+/* Container — espelho do <select> */
+#ollama-ac {
+    position: absolute !important;
+    background: var(--bg3) !important;               /* igual ao select { background } */
+    border: 1px solid var(--border) !important;      /* igual ao select { border } */
+    border-radius: var(--radius) !important;         /* igual ao select { border-radius } */
+    box-shadow: 0 4px 16px rgba(0,0,0,.5), 0 0 0 1px var(--border) !important;
+    z-index: 9999 !important;
+    max-height: 180px !important;
+    overflow-y: auto !important;
+    min-width: 160px !important;
+    font-family: 'JetBrains Mono', 'Cascadia Code', monospace !important;
+    font-size: 88% !important;
+    color: var(--fg) !important;                     /* igual ao select { color } */
+    scrollbar-width: thin !important;
+    scrollbar-color: var(--border) var(--bg3) !important;
+}
+
+#ollama-ac::-webkit-scrollbar {
+    width: 5px !important;
+}
+
+#ollama-ac::-webkit-scrollbar-track {
+    background: var(--bg3) !important;
+}
+
+#ollama-ac::-webkit-scrollbar-thumb {
+    background: var(--border) !important;
+    border-radius: 3px !important;
+}
+
+#ollama-ac::-webkit-scrollbar-thumb:hover {
+    background: var(--amber-dim) !important;
+}
+
+/* Item — equivale a <option> */
+#ollama-ac .oa-item {
+    padding: .3em .7em !important;
+    cursor: pointer !important;
+    white-space: nowrap !important;
+    transition: background .1s, color .1s !important;
+    border-bottom: 1px solid rgba(255,255,255,.03) !important;
+}
+
+/* Hover e item ativo — equivale a <option> selecionada/focada */
+#ollama-ac .oa-item:hover,
+#ollama-ac .oa-item.oa-active {
+    background: var(--amber) !important;             /* acento principal do tema */
+    color: var(--bg) !important;                     /* texto escuro sobre ambar */
+}
+
+/* Tipos de token — herdando a paleta do JUSH */
+#ollama-ac .oa-kw  { color: var(--blue) !important;    }  /* keyword  -> azul */
+#ollama-ac .oa-tbl { color: var(--amber) !important;   }  /* tabela   -> ambar */
+#ollama-ac .oa-col { color: var(--emerald) !important; }  /* coluna   -> esmeralda */
+
+/* Tokens no item ativo/hover herdam a cor do fundo ambar */
+#ollama-ac .oa-item.oa-active .oa-kw,
+#ollama-ac .oa-item.oa-active .oa-tbl,
+#ollama-ac .oa-item.oa-active .oa-col,
+#ollama-ac .oa-item:hover .oa-kw,
+#ollama-ac .oa-item:hover .oa-tbl,
+#ollama-ac .oa-item:hover .oa-col {
+    color: inherit !important;
 }
