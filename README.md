@@ -163,17 +163,17 @@ MIT License — Copyright (c) 2026 Guilherme Saldanha
 ### 🖥️ Adminer Launcher
 
 Standalone desktop application that runs Adminer locally with an embedded PHP server and a native PyWebView interface.\
-https://github.com/guisaldanha/adminer-launcher
+[https://github.com/guisaldanha/adminer-launcher](https://github.com/guisaldanha/adminer-launcher)
 
 ### 🤖 SQL Ollama
 
 Adminer plugin that integrates Ollama to generate SQL queries using local AI models.\
-https://github.com/guisaldanha/sql-ollama
+[https://github.com/guisaldanha/sql-ollama](https://github.com/guisaldanha/sql-ollama)
 
 ### 🎨 Adminer Obsidian Amber
 
 Custom dark theme for Adminer inspired by the Obsidian interface with amber accents.\
-https://github.com/guisaldanha/adminer-obsidian-amber
+[https://github.com/guisaldanha/adminer-obsidian-amber](https://github.com/guisaldanha/adminer-obsidian-amber)
 
 ------------------------------------------------------------------------
 
@@ -193,7 +193,7 @@ Ways to help:
 
 - ⭐ Star the repository
 - 🔁 Share with other developers
-- ☕ Buy me a coffee by [clicking here (PayPal)](https://www.paypal.com/cgi-bin/webscr?cmd=_xclick&business=guisaldanha@gmail.com&item_name=Buy%20a%20coffee%20because%20Adminer%20Obsidian%20Amber%20theme)
+- ☕ Buy me a coffee by [clicking here (PayPal)](https://www.paypal.com/cgi-bin/webscr?cmd=_xclick&business=guisaldanha@gmail.com&item_name=Buy%20a%20coffee%20because%20Obsidian%20Amber)
 
 ------------------------------------------------------------------------
 <div align="center">
