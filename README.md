@@ -1,99 +1,106 @@
 <div align="center">
 
 # 🟠 Obsidian Amber
-### Um tema escuro e refinado para o [Adminer](https://www.adminer.org/)
+### A refined dark theme for [Adminer](https://www.adminer.org/)
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-f59e0b?style=flat-square)](LICENSE)
 [![Adminer](https://img.shields.io/badge/Adminer-5.x-10b981?style=flat-square)](https://www.adminer.org/)
 [![CSS](https://img.shields.io/badge/Pure-CSS-58a6ff?style=flat-square)](#)
-[![Autor](https://img.shields.io/badge/Autor-Guilherme%20Saldanha-f59e0b?style=flat-square)](https://guisaldanha.com)
+[![Author](https://img.shields.io/badge/Author-Guilherme%20Saldanha-f59e0b?style=flat-square)](https://guisaldanha.com)
 
 </div>
 
 ---
 
-## ✨ Visão Geral
+## ✨ Overview
 
-**Obsidian Amber** é um tema dark para o Adminer com estética de terminal futurista. Combina o fundo profundo do Obsidian com acentos em âmbar dourado e esmeralda, tipografia monospace premium e ícones SVG inline — tudo em um único arquivo CSS, sem dependências externas além das fontes do Google Fonts.
+**Obsidian Amber** is a dark theme for Adminer with a futuristic terminal aesthetic. It combines the deep Obsidian background with golden amber and emerald accents, premium monospace typography, and inline SVG icons — all in a single CSS file, with no external dependencies except Google Fonts.
 
-### Paleta de cores
+## Preview
 
-| Papel | Cor | Hex |
-|-------|-----|-----|
-| Fundo principal | ![#0d1117](https://placehold.co/14x14/0d1117/0d1117.png) Obsidian | `#0d1117` |
-| Fundo secundário | ![#161b22](https://placehold.co/14x14/161b22/161b22.png) Obsidian 2 | `#161b22` |
-| Acento primário | ![#f59e0b](https://placehold.co/14x14/f59e0b/f59e0b.png) Âmbar | `#f59e0b` |
-| Acento secundário | ![#10b981](https://placehold.co/14x14/10b981/10b981.png) Esmeralda | `#10b981` |
-| Texto principal | ![#e6edf3](https://placehold.co/14x14/e6edf3/e6edf3.png) Ice | `#e6edf3` |
-| Erro / Destaque | ![#f87171](https://placehold.co/14x14/f87171/f87171.png) Coral | `#f87171` |
+![adminer-obsidian-amber-login](adminer-obsidian-amber-login.png)
+![adminer-obsidian-amber-select](adminer-obsidian-amber-select.png)
+![adminer-obsidian-amber-sql-command](adminer-obsidian-amber-sql-command.png)
+![adminer-obsidian-amber-table](adminer-obsidian-amber-table.png)
 
-### Tipografia
+### Color Palette
 
-- **Corpo:** [JetBrains Mono](https://fonts.google.com/specimen/JetBrains+Mono) — monospace premium para leitura de dados
-- **Títulos:** [Syne](https://fonts.google.com/specimen/Syne) — display geométrica moderna
+| Role | Color | Hex |
+|------|-------|-----|
+| Main background | ![#0d1117](https://placehold.co/14x14/0d1117/0d1117.png) Obsidian | `#0d1117` |
+| Secondary background | ![#161b22](https://placehold.co/14x14/161b22/161b22.png) Obsidian 2 | `#161b22` |
+| Primary accent | ![#f59e0b](https://placehold.co/14x14/f59e0b/f59e0b.png) Amber | `#f59e0b` |
+| Secondary accent | ![#10b981](https://placehold.co/14x14/10b981/10b981.png) Emerald | `#10b981` |
+| Main text | ![#e6edf3](https://placehold.co/14x14/e6edf3/e6edf3.png) Ice | `#e6edf3` |
+| Error / Highlight | ![#f87171](https://placehold.co/14x14/f87171/f87171.png) Coral | `#f87171` |
+
+### Typography
+
+- **Body:** [JetBrains Mono](https://fonts.google.com/specimen/JetBrains+Mono) — premium monospace for data readability
+- **Headings:** [Syne](https://fonts.google.com/specimen/Syne) — modern geometric display
 
 ---
 
-## 🚀 Instalação
+## 🚀 Installation
 
-### 1. Baixe o arquivo
+### 1. Download the file
 
 ```bash
 curl -o adminer.css https://raw.githubusercontent.com/guisaldanha/adminer-obsidian-amber/main/adminer.css
 ```
 
-Ou clone o repositório:
+Or clone the repository:
 
 ```bash
 git clone https://github.com/guisaldanha/adminer-obsidian-amber.git
 ```
 
-### 2. Coloque no mesmo diretório do Adminer
+### 2. Place it in the same directory as Adminer
 
 ```
-seu-projeto/
-├── adminer-5.x.x.php   ← arquivo do Adminer
-└── adminer.css          ← tema Obsidian Amber ✅
+your-project/
+├── adminer-5.x.x.php   ← Adminer file
+└── adminer.css         ← Obsidian Amber theme ✅
 ```
 
-### 3. Pronto!
+### 3. Done!
 
-O Adminer detecta automaticamente qualquer arquivo `adminer.css` na mesma pasta e o aplica. Não é necessário nenhuma configuração adicional.
+Adminer automatically detects any `adminer.css` file in the same folder and applies it. No additional configuration is needed.
 
 ---
 
-## 📦 O que está incluído
+## 📦 What's Included
 
-| Recurso | Detalhe |
-|---------|---------|
-| 🎨 Tema dark completo | Todos os 133 seletores do Adminer estilizados |
-| 🖼️ Ícones SVG inline | `icon-up`, `icon-down`, `icon-plus`, `icon-cross`, `icon-move` e mais |
-| 🌈 Syntax highlighting | Esquema de cores Obsidian para o JUSH (SQL, PHP, HTML, JS, CSS) |
-| 📱 Responsivo | Adaptado para mobile com `@media (max-width: 800px)` |
-| 🖨️ Print-friendly | Estilos específicos para impressão em `@media print` |
-| ↔️ Suporte RTL | Compatível com layouts da direita para esquerda |
-| 🔤 Fontes via Google Fonts | JetBrains Mono + Syne (requer conexão à internet) |
-| 🖱️ Menu inteligente | Nomes de tabelas longos expandem individualmente no hover |
+| Feature | Detail |
+|---------|--------|
+| 🎨 Full dark theme | All 133 Adminer selectors styled |
+| 🖼️ Inline SVG icons | `icon-up`, `icon-down`, `icon-plus`, `icon-cross`, `icon-move` and more |
+| 🌈 Syntax highlighting | Obsidian color scheme for JUSH (SQL, PHP, HTML, JS, CSS) |
+| 📱 Responsive | Mobile-adapted with `@media (max-width: 800px)` |
+| 🖨️ Print-friendly | Print-specific styles in `@media print` |
+| ↔️ RTL support | Compatible with right-to-left layouts |
+| 🔤 Google Fonts | JetBrains Mono + Syne (requires internet connection) |
+| 🖱️ Smart menu | Long table names expand individually on hover |
 
 ---
 
-## ⚙️ Uso offline (fontes locais)
+## ⚙️ Offline Usage (local fonts)
 
-Por padrão, o tema carrega as fontes via Google Fonts. Se precisar de uso 100% offline:
+By default, the theme loads fonts via Google Fonts. For 100% offline use:
 
-1. Baixe as fontes:
+1. Download the fonts:
    - [JetBrains Mono](https://fonts.google.com/specimen/JetBrains+Mono)
    - [Syne](https://fonts.google.com/specimen/Syne)
 
-2. Coloque os arquivos `.woff2` em uma pasta `fonts/` ao lado do `adminer.css`
+2. Place the `.woff2` files in a `fonts/` folder next to `adminer.css`
 
-3. Substitua o `@import` no início do CSS:
+3. Replace the `@import` at the top of the CSS:
 
 ```css
-/* Remova esta linha: */
+/* Remove this line: */
 @import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono...');
 
-/* Adicione estas: */
+/* Add these: */
 @font-face {
     font-family: 'JetBrains Mono';
     src: url('fonts/JetBrainsMono-Regular.woff2') format('woff2');
@@ -104,35 +111,35 @@ Por padrão, o tema carrega as fontes via Google Fonts. Se precisar de uso 100% 
     src: url('fonts/Syne-Regular.woff2') format('woff2');
     font-weight: 400;
 }
-/* ... demais pesos conforme necessário */
+/* ... other weights as needed */
 ```
 
 ---
 
-## 🔧 Customização
+## 🔧 Customization
 
-Todas as cores e variáveis ficam no topo do arquivo na seção `:root` / `html`. Para mudar o acento principal de âmbar para outra cor, basta alterar as variáveis:
+All colors and variables are at the top of the file in the `:root` / `html` section. To change the main accent from amber to another color, just edit the variables:
 
 ```css
 html {
-    --amber:     #f59e0b;   /* cor de destaque principal */
-    --amber-dim: #78350f;   /* versão escura do destaque */
-    --emerald:   #10b981;   /* cor de destaque secundária */
+    --amber:     #f59e0b;   /* main highlight color */
+    --amber-dim: #78350f;   /* dark version of highlight */
+    --emerald:   #10b981;   /* secondary highlight color */
 }
 ```
 
 ---
 
-## 🧪 Compatibilidade
+## 🧪 Compatibility
 
-| Adminer | Compatível |
-|---------|-----------|
-| 5.x     | ✅ Testado |
-| 4.x     | ✅ Deve funcionar |
-| 3.x     | ⚠️ Não testado |
+| Adminer | Compatible |
+|---------|------------|
+| 5.x     | ✅ Tested  |
+| 4.x     | ✅ Should work |
+| 3.x     | ⚠️ Not tested |
 
-| Banco de dados | Compatível |
-|----------------|-----------|
+| Database | Compatible |
+|----------|------------|
 | MySQL / MariaDB | ✅ |
 | PostgreSQL | ✅ |
 | SQLite | ✅ |
@@ -141,29 +148,54 @@ html {
 
 ---
 
-## 📄 Licença
+## 📄 License
 
-Distribuído sob a licença **MIT**. Veja o arquivo [LICENSE](LICENSE) para mais detalhes.
+Distributed under the **MIT** license. See the [LICENSE](LICENSE) file for more details.
 
 ```
 MIT License — Copyright (c) 2026 Guilherme Saldanha
 ```
 
----
+------------------------------------------------------------------------
 
-## 👤 Autor
+## 🔗 Related Adminer Projects
 
-**Guilherme Saldanha**
+### 🖥️ Adminer Launcher
 
-- 🌐 [guisaldanha.com](https://guisaldanha.com)
-- 🐙 GitHub: [@guisaldanha](https://github.com/guisaldanha)
+Standalone desktop application that runs Adminer locally with an embedded PHP server and a native PyWebView interface.\
+https://github.com/guisaldanha/adminer-launcher
 
----
+### 🤖 SQL Ollama
 
+Adminer plugin that integrates Ollama to generate SQL queries using local AI models.\
+https://github.com/guisaldanha/sql-ollama
+
+### 🎨 Adminer Obsidian Amber
+
+Custom dark theme for Adminer inspired by the Obsidian interface with amber accents.\
+https://github.com/guisaldanha/adminer-obsidian-amber
+
+------------------------------------------------------------------------
+
+## 👨‍💻 Author
+
+Developed by **Guilherme Saldanha**
+- GitHub: [https://github.com/guisaldanha](https://github.com/guisaldanha)
+- Site: [https://guisaldanha.com](https://guisaldanha.com)
+
+------------------------------------------------------------------------
+
+# ❤️ Support the Developer
+
+If this project saves you time or helps your workflow, consider supporting its development.
+
+Ways to help:
+
+- ⭐ Star the repository
+- 🔁 Share with other developers
+- ☕ Buy me a coffee by [clicking here (PayPal)](https://www.paypal.com/cgi-bin/webscr?cmd=_xclick&business=guisaldanha@gmail.com&item_name=Buy%20a%20coffee%20because%20Adminer%20Obsidian%20Amber%20theme)
+
+------------------------------------------------------------------------
 <div align="center">
-
-Feito com ☕ e muitas linhas de CSS
-
-Se este tema foi útil para você, considere dar uma ⭐ no repositório!
-
+  <p>Made with ☕ by Guilherme Saldanha</p>
 </div>
